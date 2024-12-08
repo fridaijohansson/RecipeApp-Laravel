@@ -20,8 +20,16 @@ class DatabaseSeeder extends Seeder
             'name' => 'Super User',
             'username' => 'superuser',
             'email' => 'admin@example.com',
-            'password' => 'superuser123',
+            'password' => 'superUser123',
             'is_admin' => 1,
+        ]);
+
+        User::factory()->create([
+            'name' => 'User',
+            'username' => 'user',
+            'email' => 'user@example.com',
+            'password' => 'regularUser123',
+            'is_admin' => 0,
         ]);
 
         Recipe::factory(20)->create();
